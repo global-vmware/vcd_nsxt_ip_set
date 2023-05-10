@@ -1,4 +1,4 @@
-# Terraform Module for Managing NSX-T IP Sets
+# VCD NSX-T IP Sets Terraform Module
 
 This Terraform module manages NSX-T IP sets in VMware Cloud Director (VCD) environments using the `vmware/vcd` provider.
 
@@ -34,6 +34,8 @@ This Terraform module manages NSX-T IP sets in VMware Cloud Director (VCD) envir
 | ip_set_ids       | The IDs of the NSX-T IP sets that were created |
 
 ## Example Usage
+
+This is an example of a `main.tf` file that uses the `"github.com/global-vmware/vcd_nsxt_ip_set"` Module source to create NSX-T IP Sets in a VMware Cloud Director environment:
 
 ```terraform
 module "nsxt_ip_sets" {
