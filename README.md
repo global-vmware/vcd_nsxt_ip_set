@@ -21,9 +21,9 @@ This Terraform module manages NSX-T IP sets in VMware Cloud Director (VCD) envir
 
 | Name            | Description                                                      | Type | Default | Required |
 |-----------------|------------------------------------------------------------------|------|---------|----------|
-| vdc_org_name | The name of the Data Center Group Organization in VCD | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name>"` | yes |
-| vdc_edge_name | The name of the NSX-T Edge Gateway in VCD | string | `"Edge Gateway Name Format: <Account_Number>-<Region>-<Edge_GW_Identifier>-<edge>"` | yes |
+| vdc_org_name | The name of the Data Center Group Organization in VCD | string | `"Organization Name Format: <Account_Number>-<Region>-<Account_Name>"` | yes |
 | vdc_group_name | The name of the Data Center Group in VCD | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name> <datacenter group>"` | yes |
+| vdc_edge_name | The name of the NSX-T Edge Gateway in VCD | string | `"Edge Gateway Name Format: <Account_Number>-<Region>-<Edge_GW_Identifier>-<edge>"` | yes |
 | ip_sets | A list of IP sets to create in NSX-T | list | `ip_sets = [{name = "Segment-01-Network_192.168.0.0/24_IP-Set", description = "Segment-01 Network IP Set", ip_addresses = ["192.168.0.0/24"]}, {name = "Segment-02-Network_192.168.1.0/24_IP-Set", description = "Segment-02 Network IP Set", ip_addresses = ["192.168.0.0/24"]}]` | yes |
 
 ## Outputs
@@ -60,3 +60,6 @@ module "vcd_nsxt_ip_set" {
 }
 ```
 
+## Authors
+
+This module is maintained by the [Global VMware Cloud Automation Services Team](https://github.com/global-vmware).
