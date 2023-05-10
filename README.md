@@ -1,6 +1,6 @@
 # VCD NSX-T IP Set Terraform Module
 
-This Terraform module manages NSX-T IP sets in VMware Cloud Director (VCD) environments using the `vmware/vcd` provider.
+This Terraform module will deploy NSX-T IP Sets into an existing VMware Cloud Director (VCD) Environment.  This module can be used to provsion new IP Sets into [Rackspace Technology SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VCD Data Center Regions.
 
 ## Requirements
 
