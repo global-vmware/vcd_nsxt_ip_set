@@ -7,7 +7,7 @@ This Terraform module will deploy NSX-T IP Sets into an existing VMware Cloud Di
 | Name      | Version |
 |-----------|---------|
 | terraform | ~> 1.2  |
-| vcd       | ~> 3.8.2 |
+| vcd       | ~> 3.8  |
 
 ## Resources
 
@@ -24,7 +24,7 @@ This Terraform module will deploy NSX-T IP Sets into an existing VMware Cloud Di
 | vdc_org_name | The name of the Data Center Group Organization in VCD | string | `"Organization Name Format: <Account_Number>-<Region>-<Account_Name>"` | yes |
 | vdc_group_name | The name of the Data Center Group in VCD | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name> <datacenter group>"` | yes |
 | vdc_edge_name | The name of the NSX-T Edge Gateway in VCD | string | `"Edge Gateway Name Format: <Account_Number>-<Region>-<Edge_GW_Identifier>-<edge>"` | yes |
-| ip_sets | A list of IP sets to create in NSX-T | list | `ip_sets = [{name = "Segment-01-Network_192.168.0.0/24_IP-Set", description = "Segment-01 Network IP Set", ip_addresses = ["192.168.0.0/24"]}, {name = "Segment-02-Network_192.168.1.0/24_IP-Set", description = "Segment-02 Network IP Set", ip_addresses = ["192.168.0.0/24"]}]` | yes |
+| ip_sets | A list of IP sets to create in NSX-T | list | N/A | yes |
 
 ## Outputs
 
@@ -39,7 +39,7 @@ This is an example of a `main.tf` file that uses the `"github.com/global-vmware/
 
 ```terraform
 module "vcd_nsxt_ip_set" {
-  source            = "github.com/global-vmware/vcd_nsxt_ip_set.git?ref=v1.1.0"
+  source            = "github.com/global-vmware/vcd_nsxt_ip_set.git?ref=v1.2.0"
 
   vdc_org_name      = "<US1-VDC-ORG-NAME>"
   vdc_group_name    = "<US1-VDC-GRP-NAME>"
